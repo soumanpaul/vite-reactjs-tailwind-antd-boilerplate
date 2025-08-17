@@ -11,6 +11,8 @@ A robust starter template for building scalable, high-performance single-page ap
 - **Vitest** – Fast unit testing framework
 - **Playwright** – Reliable end-to-end testing
 
+- This project is using LESS based css for custom antd styling and Tailwindcss utilits
+
 ## Features
 
 - Instant hot module replacement for efficient development
