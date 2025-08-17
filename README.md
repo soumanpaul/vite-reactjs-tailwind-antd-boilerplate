@@ -1,70 +1,56 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Vite Reactjs + Tailwind CSS + Ant Design Starter
 
-Currently, two official plugins are available:
+This project provides a scalable code structure for building modern frontend single-page applications using the Vite ecosystem. The stack includes:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite** – Fast build tool and development server
+- **Tailwind CSS** – Utility-first CSS framework
+- **Ant Design (Antd)** – Comprehensive React UI component library
+- **State Management** – Choose from Redux, Zustand, or Recoil
+- **React Router** – Declarative routing for React apps
+- **Vitest** – Unit testing framework
+- **Playwright** – End-to-end testing
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Rapid development with hot module replacement
+- Customizable UI with Tailwind and Ant Design
+- Flexible state management options
+- Built-in routing and navigation
+- Ready-to-use testing setup for unit and E2E tests
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. **Install dependencies:**  
+  ```bash
+  npm install
+  ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Start development server:**  
+  ```bash
+  npm run dev
+  ```
+
+3. **Run tests:**  
+  ```bash
+  npm run test
+  npm run test:e2e
+  ```
+
+## Folder Structure
+
+```
+src/
+  components/
+  hooks/
+  lib/                 - 
+  locales/             - for multi langauage support
+  features or pages/
+  store/
+  routes/
+  styles/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# vite-reactjs-tailwind-antd-boilerplate
+MIT

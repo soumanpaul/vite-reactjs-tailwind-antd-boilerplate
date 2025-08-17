@@ -1,25 +1,21 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { Button } from "antd";
+import Loader from "@components/ui/Loader";
+import ProfileCard from "@components/ui/ProfileCard";
 
-function App() {
+const AppAdminDashboard: React.FC = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <p className="text-3xl text-red-500 p-4 my-4 border-3">Hello world!</p>
+      <p className="text-center text-3xl text-red-500 p-4 my-4 border-3">
+        Hello world!
+      </p>
+      <Loader />
+      <ProfileCard />
       <Button type="primary" className="">
         Vite + React
       </Button>
     </>
   );
-}
+};
 
-export default App;
+export default AppAdminDashboard;

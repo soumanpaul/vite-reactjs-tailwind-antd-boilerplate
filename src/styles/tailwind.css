@@ -1,0 +1,29 @@
+/* reusable utility classes */
+
+@import "tailwindcss";
+
+/* design tokens */
+@theme {
+  --color-primary: #1d4ed8;
+  --color-secondary: #9333ea;
+  --font-sans: ui-sans-serif, system-ui;
+  --breakpoint-3xl: 120rem;
+}
+
+/* reusable component classes */
+@layer components {
+  .loader-container {
+    @apply flex items-center justify-center;
+  }
+  .loader {
+    @apply font-bold text-green-600;
+  }
+}
+
+/* real utility (gets variants like hover:, lg:, etc.) */
+@layer utilities {
+  .my-custom-utility {
+    padding: 1rem;
+    border: 1px solid black;
+  }
+}

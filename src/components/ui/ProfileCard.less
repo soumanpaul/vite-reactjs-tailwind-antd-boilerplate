@@ -1,0 +1,86 @@
+// (optional) pull in your design tokens (CSS vars like --background, --foreground, etc.)
+// @import (optional) "../../globals.css";
+
+/* ---- Tailwind utility equivalents as LESS vars (for clarity) ---- */
+@rounded-xl: 0.75rem; // rounded-xl
+@rounded-lg: 0.5rem; // rounded-lg
+
+// Shadows (Tailwind defaults)
+@shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05); // shadow-sm
+@shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1); // shadow
+@shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); // shadow-md
+
+// Color fallbacks if your CSS variables aren't defined
+@border-color: var(--border, #e5e7eb);
+@bg-color: var(--background, #ffffff);
+@fg-color: var(--foreground, #111827);
+@muted-fg: var(--muted-foreground, #6b7280);
+
+/* ---------------------------------------------------------------- */
+.profile-card-container {
+  display: flex;
+  justify-content: center;
+
+  .profile-card {
+    // @apply rounded-xl border bg-background text-foreground shadow-sm;
+    border-radius: @rounded-xl;
+    border: 1px solid @border-color;
+    background-color: @bg-color;
+    color: @fg-color;
+    box-shadow: @shadow-sm;
+
+    // @apply md:p-6 p-4;
+    padding: 1rem; // p-4
+    @media (min-width: 768px) {
+      padding: 1.5rem;
+    } // md:p-6
+
+    .title {
+      // @apply text-lg font-semibold tracking-tight;
+      font-size: 1.125rem; // text-lg
+      line-height: 1.75rem; // text-lg
+      font-weight: 600; // font-semibold
+      letter-spacing: -0.025em; // tracking-tight
+    }
+
+    .subtitle {
+      // @apply text-sm text-muted-foreground;
+      font-size: 0.875rem; // text-sm
+      line-height: 1.25rem; // text-sm
+      color: @muted-fg; // text-muted-foreground
+    }
+
+    /* AntD tweaks when wrapped by this component */
+    .ant-card-head {
+      // @apply px-5 py-3;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+    .ant-card-body {
+      // @apply p-5;
+      padding: 1.25rem;
+    }
+  }
+
+  .card {
+    // @apply p-4 rounded-lg shadow bg-white;  // multiple utilities
+    padding: 1rem;
+    border-radius: @rounded-lg;
+    box-shadow: @shadow;
+    background-color: #ffffff;
+
+    &:hover {
+      // @apply shadow-md; // pseudo-class split out
+      box-shadow: @shadow-md;
+    }
+  }
+}
+
+// responsive split out (md:p-6)
+@media (min-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
