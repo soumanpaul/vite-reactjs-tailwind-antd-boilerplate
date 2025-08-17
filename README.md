@@ -1,23 +1,23 @@
 
-# Vite Reactjs + Tailwind CSS + Ant Design Starter
+# Modern React Dashboard Boilerplate
 
-This project provides a scalable code structure for building modern frontend single-page applications using the Vite ecosystem. The stack includes:
+A robust starter template for building scalable, high-performance single-page applications with the Vite ecosystem. This boilerplate integrates essential tools and libraries for rapid development, maintainable code, and a polished user interface:
 
-- **Vite** – Fast build tool and development server
-- **Tailwind CSS** – Utility-first CSS framework
-- **Ant Design (Antd)** – Comprehensive React UI component library
-- **State Management** – Choose from Redux, Zustand, or Recoil
-- **React Router** – Declarative routing for React apps
-- **Vitest** – Unit testing framework
-- **Playwright** – End-to-end testing
+- **Vite** – Lightning-fast build tool and dev server
+- **Tailwind CSS** – Utility-first styling for flexible design
+- **Ant Design (Antd)** – Rich React UI component library
+- **State Management** – Easily integrate Redux, Zustand, or Recoil
+- **React Router** – Seamless client-side navigation
+- **Vitest** – Fast unit testing framework
+- **Playwright** – Reliable end-to-end testing
 
 ## Features
 
-- Rapid development with hot module replacement
-- Customizable UI with Tailwind and Ant Design
-- Flexible state management options
-- Built-in routing and navigation
-- Ready-to-use testing setup for unit and E2E tests
+- Instant hot module replacement for efficient development
+- Customizable and responsive UI with Tailwind and Ant Design
+- Pluggable state management solutions
+- Built-in routing for scalable navigation
+- Pre-configured unit and E2E testing setup
 
 ## Getting Started
 
@@ -43,12 +43,12 @@ This project provides a scalable code structure for building modern frontend sin
 src/
   components/
   hooks/
-  lib/                 - 
-  locales/             - for multi langauage support
-  features or pages/
-  store/
-  routes/
-  styles/
+  lib/                 - Shared utilities and helpers
+  locales/             - Internationalization support
+  features/ or pages/  - Application modules or views
+  store/               - State management logic
+  routes/              - Route definitions
+  styles/              - Global and custom styles
 ```
 
 ## License
